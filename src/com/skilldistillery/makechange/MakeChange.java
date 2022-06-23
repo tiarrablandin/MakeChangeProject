@@ -10,7 +10,6 @@ public class MakeChange {
 		double price = 0.00;
 		double cash = 0.00;
 		double dollars = 0.00;
-		double cents = 0.00;
 		
 		
 		System.out.println("Price: ");
@@ -25,27 +24,26 @@ public class MakeChange {
 		
 		else if (cash > price) {
 			dollars = cash - price;
-//			cents = dollars % 2;
+			dollars *= 100;
 			System.out.println("\nChange: \n");
-				if ((int)dollars / 20 > 0) {
-					System.out.println("20's: " + ((int)dollars / 20));
-					dollars %= 20; 
+				if ((int)dollars / 2000 > 0) {
+					System.out.println("20's: " + ((int)dollars / 2000));
+					dollars %= 2000; 
 				}
 				
-				if ((int)dollars / 10 > 0) {
-					System.out.println("10's: " + (int)dollars / 10);
-					dollars %= 10; 
+				if ((int)dollars / 1000 > 0) {
+					System.out.println("10's: " + (int)dollars / 1000);
+					dollars %= 1000; 
 				}
 				
-				if ((int)dollars / 5 > 0) {
-					System.out.println("5's: " + (int)dollars / 5);
-					dollars %= 5; 
+				if ((int)dollars / 500 > 0) {
+					System.out.println("5's: " + (int)dollars / 500);
+					dollars %= 500; 
 				}
 				
-				if ((int)dollars / 1 > 0) {
-					System.out.println("1's: " + (int)dollars / 1);
-					dollars %= 1; 
-					dollars *= 100;
+				if ((int)dollars / 100 > 0) {
+					System.out.println("1's: " + (int)dollars / 100);
+					dollars %= 100; 
 				}
 				
 				if ((int)dollars / 25 > 0) {
